@@ -9,13 +9,13 @@ In the input file, we have an initial board data of 10 states and each state wil
 **value 3: die from COVID-19 infection**  
 
 Ex.
-  New York: 
-    000010 
-    001010 
-    000010 
-    010010 
-    000010 
-    001010
+  New York:  
+    000010  
+    001010  
+    000010  
+    010010  
+    000010  
+    001010  
 
 ## Spread Rules
 1. Any live cell(value0)with an eighbor infected byCOVID-19 will have 12.5% to also infected by virus. (In other words, if all of its 8 neighbors are infected by virus, it will be 100% infected by virus.)
@@ -26,9 +26,9 @@ For each state, we assume they will only be adjacent to two other states and the
 
 Ex.
   MASSACHUSETTS:    NEW YORK:     PENNSYLVANIA:
-    010010            000010          000010
-    000011            000010          100011
-    000010            001011          001010
-    010011            000010          100010
-    000010            000011          000011
-    001010            000010          000010
+    010010            000010          000010  
+    000011            000010          100011  
+    000010            001011          001010  
+    010011            000010          100010  
+    000010            000011          000011  
+    001010            000010          000010  
