@@ -3,10 +3,10 @@ Our project is inspired by the Game of Life assignments and the spread of corona
 
 ## Initialization
 In the input file, we have an initial board data of 10 states and each state will have different initialization. For example, we create an initial 6*6 board of New York States as follows. The value of each cell can be 0 to 3. If a cell recovers or dies (with value 2 or 3), their value will never be changed in the future.
-** value 0: infected with the COVID-19 infection. 
-** value 1: not infected with the COVID-19 infection. 
-** value 2: recover from the COVID-19 infection 
-** value 3: die from COVID-19 infection
+** value 0: infected with the COVID-19 infection. **
+** value 1: not infected with the COVID-19 infection. **
+** value 2: recover from the COVID-19 infection **
+** value 3: die from COVID-19 infection **
 
 Ex.
   New York: 
