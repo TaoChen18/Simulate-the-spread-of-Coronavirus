@@ -25,7 +25,7 @@ Ex.
 For each state, we assume they will only be adjacent to two other states and they need to share their borders and update their first and last columns based on their neighbor cell values. Our project will not have wrap around because it does not make sense for the geographic location to have wrap around. For our first state, we can assume the left neighbor column of its first column is all 0s. The same for the last column of the last state. However, since they are different states with different systems, they need to update their board in the huge global file and then read the neighbor data they need for each iteration.
 
 Ex.
-  MASSACHUSETTS:    NEW YORK:     PENNSYLVANIA:
+  MASSACHUSETTS:    NEW YORK:     PENNSYLVANIA:  
     010010            000010          000010  
     000011            000010          100011  
     000010            001011          001010  
