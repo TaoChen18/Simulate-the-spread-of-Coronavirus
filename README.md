@@ -34,30 +34,30 @@ Ex.
     001010            000010          000010  
 
 ## File nodes:
-1. gol-main.c:
-includes all the MPI I/O function and the main function is defined in this file.
+1. gol-main.c:  
+includes all the MPI I/O function and the main function is defined in this file.  
 First, it uses MPI read to read all the files and then process it in to the mode which can be easily executed in from the extern function(defined in gol-with-cuda.cu).Then used the the function of transferred rules of several iterations. This part  call the kernel function in cuda file and would be executed on GPU. It then executes the MPI write function. The total time has been recorded using ticks.
 
-2. gol-with-cuda.cu:
-Defined all the function executed in cuda GPU which is actually the changing rules of every iteration.It starts with the memory allocation of GPU, then the initialize of all the parameter.
+2. gol-with-cuda.cu:  
+Defined all the function executed in cuda GPU which is actually the changing rules of every iteration.It starts with the memory allocation of GPU, then the initialize of all the parameter.  
 The kernel function and related threads and blocks. The synchronization of parallel data. And at last swap the old and new world. These are all the  function  we would use in the main function.
 
-3. sov-without-cuda.c:
+3. sov-without-cuda.c:  
 is no different from the gol-main.c. Except that the implementation of the changing world every iteration used the parallel mode in CPU not the parallel mode in GPU. Besides that, the MPI I/O is just the same and all the rules of changing is the same. So there is no extern function from gol-with-cuda.cu file.
 
-4. slurmSpecturm.sh:
-is the shell file which is used to run the code after makefile compiled. 
-**NOTICE**:
-The “scratch” in the last two lines should be replaced by the the path of the local execution file(after makefile).
-Every node only has 6 ranks and  the rank size needs to be the same as the state count.
-The 1st argument is the state amount/rank size
-The 2rd argument is the state height/width(it’s a square in our model)
-The 3rd argument is the thread count.
-The 4th  argument is the integration count.
-The 5th argument is the flag(1 indicates writing the result into file, otherwise no output in file.)
+4. slurmSpecturm.sh:  
+is the shell file which is used to run the code after makefile compiled.   
+**NOTICE**:  
+The “scratch” in the last two lines should be replaced by the the path of the local execution file(after makefile).  
+Every node only has 6 ranks and  the rank size needs to be the same as the state count.  
+The 1st argument is the state amount/rank size  
+The 2rd argument is the state height/width(it’s a square in our model)  
+The 3rd argument is the thread count.  
+The 4th  argument is the integration count.  
+The 5th argument is the flag(1 indicates writing the result into file, otherwise no output in file.)  
 
-5. makefile:
+5. makefile:  
 includes all the commands needed to compile all the files and execute the program in the bash environment. Type in make in the bash all these commands would been executed.
 
-6. g1.xlsx:
+6. g1.xlsx:  
 Data for making graphs
